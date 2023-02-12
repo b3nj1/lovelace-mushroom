@@ -35,6 +35,8 @@ export function computeRgbColor(color: string): string {
         } catch (err) {
             return "";
         }
+    } else if (color.startsWith("var(")) {
+      return `${color}`;
     }
     return color;
 }
